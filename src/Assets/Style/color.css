@@ -1,0 +1,17 @@
+
+:root{
+    --color-black: #000000;
+    --color-red: #FF0000;
+    --color-white:#FFFFFF; 
+    --color-grey: #D9D9D9;
+    --color-liteblack1: #010101;
+    --color-litewhite: #EDF2F4;
+    --color-black50: rgb(0, 0, 0, 50%);
+    --color-black9: #003049;
+    --color-aquaf: #66C8CF;
+    --color-aqua0: #69C9D0;
+    --color-red8: #D62828;
+    --color-red1: #EE1D51;
+    --color-red2: #EE1D52;
+    --color-redd: #F42D2D;
+}

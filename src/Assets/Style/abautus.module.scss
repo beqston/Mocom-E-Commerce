@@ -1,0 +1,33 @@
+main{
+    width: 100%;
+
+    .abaut-main-container{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 2rem;
+
+        .abaut-img{
+            display: flex;
+            justify-content: center;
+            padding-bottom: 2rem;
+
+            img{
+                width: 73%;
+            }
+        }
+
+        p{
+            width: 80%;
+            text-align: left;
+            padding: 1rem;
+            margin: 0 auto;
+        }
+
+        h3{
+            width: 80%;
+            text-align: left;
+            padding: 1rem;
+            margin:  0 auto;
+        }
+    }
+}

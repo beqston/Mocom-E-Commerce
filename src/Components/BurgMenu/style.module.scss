@@ -1,0 +1,126 @@
+.burger-menu-none{
+    display: none;
+}
+
+.active-burg-menu{
+    display: none;
+    max-width: 40px;
+    max-height: 40px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+
+    img{
+        max-width: 40px;
+        max-height: 40px;
+    }
+}
+
+.active-burg-menu-none{
+    display: none;
+}
+
+
+.burger-menu{
+    display: none;
+    width: 200px;
+    height: 100vh;
+    position: sticky;
+    top: 1px;
+    transform: translateY(-20px);
+    border-radius: 10px;
+    z-index: 20;
+    background-color: var(--color-litewhite);
+
+    .burg-icon{
+        max-width: 40px;
+        max-height: 40px;
+        position: absolute;
+        left: 10px;
+        top: 2px;
+
+        img{
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    .burg-icon-none{
+        display: none;
+        max-width: 40px;
+        max-height: 40px;
+
+        img{
+            max-width: 40px;
+            max-height: 40px;
+        }
+    }
+    .close-icon-none {
+        display: none;
+        max-width: 40px;
+        max-height: 40px;
+
+        img{
+            max-width: 40px;
+            max-height: 40px;
+        }
+    }
+    
+    .burg-menu-list-none{
+        display: none;
+    }
+
+    .burg-menu-list{
+        display: flex;
+        position: absolute;
+        top: 70px;
+
+        nav{
+            display: flex;
+            gap: 100px;
+
+            li{
+                list-style-type: none;
+                display: flex;
+                justify-content: start;
+                
+
+                a{
+                    text-decoration: none;
+                    font-size: 2rem;
+                    color: var(--color-black9);
+                }
+
+                a:focus{
+                    color: red;
+                }
+            }
+        }
+    }
+
+
+    .close-icon{
+        display: flex;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        right: 10px;
+        top: 2px;
+
+        img{
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 768px){
+    .active-burg-menu{
+        display: flex;
+    }
+ .burger-menu{
+    display: flex;
+ }
+
+}
