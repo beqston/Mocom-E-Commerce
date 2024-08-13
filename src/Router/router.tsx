@@ -5,18 +5,22 @@ import Blog from "../Pages/Blog";
 import About from "../Pages/AboutUs";
 import SingleItem from "../Pages/SingleItem";
 import NotFound from "../Pages/NotFound";
+import Layout from "../Layout/Layout";
 
-const Router = () => {
+const RouterComponent = () => {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/shopall" element={<ShopAll />} />
-      <Route path="/blog" element={<Blog />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/item" element={<SingleItem />} />
-      <Route path="*" element={<NotFound />} />
+        <Route element={<Layout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/shopall" element={<ShopAll />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/product/:productID" element={<SingleItem />} />
+            <Route path="*" element={<NotFound />} />
+        </Route>
+
     </Routes>
   );
 };
 
-export default Router;
+export default RouterComponent;

@@ -5,7 +5,10 @@ import mocom from "../../Assets/Photo/HeaderFoto/mocom.png";
 import search from "../../Assets/Photo/HeaderFoto/search.png";
 
 
+
 const Header = () => {
+
+
   return (
     <header>
       <div className={classname["header-container"]}>

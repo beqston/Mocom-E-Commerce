@@ -35,56 +35,68 @@ const Home = () => {
             <img src={rentacle} alt="mobile" />
           </div>
         </div>
-
         <div className={classname["product-container"]}>
-          <div className={classname.product}>
-            <button type="button">
-              <NavLink to={"/item"}>Sale!</NavLink>
-            </button>
-            <div className={classname.img}>
-              <img src={product1} alt="product" />
+        <NavLink to={"/product/1"}>
+            <div className={classname.product}>
+              <button type="button">
+                Sale!
+              </button>
+              <div className={classname.img}>
+                <img src={product1} alt="product" />
+              </div>
+              <div className={classname["name-cnt"]}>
+                <p>iPhone 13 Pro - Transparent </p>
+                <p>LKR 499</p>
+              </div>
             </div>
-            <div>
-              <span>iPhone 13 Pro - Transparent LKR 499</span>
-            </div>
-          </div>
+          </NavLink>
 
-          <div className={classname.product}>
-            <button>
-              <NavLink to={"/item"}>Sale!</NavLink>
-            </button>
-            <div className={classname.img}>
-              <img src={product2} alt="product" />
+          <NavLink to={"/product/2"}>
+            <div className={classname.product}>
+              <button>
+                Sale!
+              </button>
+              <div className={classname.img}>
+                <img src={product2} alt="product" />
+              </div>
+              <div className={classname["name-cnt"]}>
+                <p>Samsung S23+ - Transparent </p>
+                <p>LKR 799</p>
+              </div>
             </div>
-            <div>
-              <span>Samsung S23+ - Transparent LKR 799</span>
-            </div>
-          </div>
+          </NavLink>
 
-          <div className={classname.product}>
-            <button type="button">
-              <NavLink to={"/item"}>Sale!</NavLink>
-            </button>
-            <div className={classname.img}>
-              <img src={product3} alt="product" />
+          <NavLink to={"/product/7"}>
+            <div className={classname.product}>
+              <button type="button">
+                Sale!
+              </button>
+              <div className={classname.img}>
+                <img src={product3} alt="product" />
+              </div>
+              <div className={classname["name-cnt"]}>
+                <p>iPhone 14 - Transparent with magsafe </p>
+                <p>LKR 799</p>
+              </div>
             </div>
-            <div>
-              <span>iPhone 14 - Transparent with magsafe LKR 799</span>
-            </div>
-          </div>
+          </NavLink>
 
-          <div className={classname.product}>
-            <button>
-              <NavLink to={"/item"}>Sale!</NavLink>
-            </button>
-            <div className={classname.img}>
-              <img src={product4} alt="product" />
+          <NavLink to={"/product/8"}>
+            <div className={classname.product}>
+              <button>
+                Sale!
+              </button>
+              <div className={classname.img}>
+                <img src={product4} alt="product" />
+              </div>
+              <div className={classname["name-cnt"]}>
+                <p>Pixel 7 Pro - Transparent Wireless </p>
+                <p>LKR 599</p>
+              </div>
             </div>
-            <div>
-              <span>Pixel 7 Pro - Transparent Wireless LKR 599</span>
-            </div>
+          </NavLink>
+
           </div>
-        </div>
 
         <div className={classname["abaut-container"]}>
           <div>

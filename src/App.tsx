@@ -1,13 +1,13 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Layout from './Layout/Layout';
+import RouterComponent from './Router/router';
+
+
 
 
 function App() {
   return (
     <div className="App">
-      <Layout />
+      <RouterComponent />  
     </div>
   );
 }
