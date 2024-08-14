@@ -38,13 +38,14 @@ const ShopAll = () => {
             prods?.map((item)=>{
                 return(
                     <div key={item.id} className={classname['product-container']}>
-                    <div className={classname['product-img']}>
-                        <img src={`http://localhost:3000/${item.image}`} alt={item.name} />
+                      <Link to={`http://localhost:3000/product/${item.id}`}>
+                        <div className={classname['product-img']}>
+                            <img src={`http://localhost:3000/${item.image}`} alt={item.name} />
+                        </div>
+                        <p>{item.name}</p>
+                        <p>{item.slug}</p>
+                      </Link>
                     </div>
-                    <p>{item.name}</p>
-                    <p>{item.slug}</p>
-                    <Link to={`http://localhost:3000/product/${item.id}`}>ss</Link>
-                </div>
                 )
             })
         }

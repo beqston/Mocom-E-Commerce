@@ -5,7 +5,7 @@ import product11 from "../Assets/Photo/ShopAll/product11.png";
 import product12 from "../Assets/Photo/ShopAll/product12.png";
 import { useEffect, useState } from "react";
 import { ProdsType } from "./ShopAll";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 type ProdID = {
   id: string | undefined
@@ -50,15 +50,15 @@ const SingleItem = () => {
 
               <div className={classname["span-container"]}>
                 <span>
-                  Item {prod.id} <span>LKR 599</span>
+                  Item {prod.id} <span>LKR {Number(prod.id) * 20 + 12}</span>
                 </span>
                 <br />
                 <span>
-                  Item {parseInt(prod.id) * 10} <span>LKR 549</span>
+                  Item {parseInt(prod.id) * 10} <span>LKR {Number(prod.id)* 30 + 3}</span>
                 </span>
                 <br />
                 <span>
-                  Item {parseInt(prod.id) * 10 + parseInt(prod.id) + 30} <span>LKR 449</span>{" "}
+                  Item {parseInt(prod.id) * 10 + parseInt(prod.id) + 30} <span>{prod.slug}</span>
                 </span>
               </div>
               <article>
@@ -77,43 +77,52 @@ const SingleItem = () => {
 
           <div className={classname["blog-botton-container"]}>
             <h3>similar Product</h3>
-
+           
             <div className={classname["main-bottom"]}>
-              <div className={classname["product-bottom-container"]}>
-                <div className={classname["prod-img"]}>
-                  <img src={product9} alt="iphone" />
+             <Link to={"/product/1"} >
+                <div className={classname["product-bottom-container"]}>
+                  <div className={classname["prod-img"]}>
+                    <img src={product9} alt="iphone" />
+                  </div>
+                  <p>
+                    {prod.name}<br /> LKR 499
+                  </p>
                 </div>
-                <p>
-                  {prod.name}<br /> LKR 499
-                </p>
-              </div>
+             </Link>
 
-              <div className={classname["product-bottom-container"]}>
-                <div className={classname["prod-img"]}>
-                  <img src={item} alt="samsung" />
-                </div>
-                <p>
-                  Samsung S23+ - Transparent <br /> LKR 799
-                </p>
-              </div>
 
-              <div className={classname["product-bottom-container"]}>
-                <div className={classname["prod-img"]}>
-                  <img src={product11} alt="pixel" />
+             <Link to={"/product/2"} >
+                <div className={classname["product-bottom-container"]}>
+                  <div className={classname["prod-img"]}>
+                    <img src={item} alt="samsung" />
+                  </div>
+                  <p>
+                    Samsung S23+ - Transparent <br /> LKR 799
+                  </p>
                 </div>
-                <p>
-                  Pixel 6a - Transparent  <br /> LKR 599
-                </p>
-              </div>
+              </Link>
 
-              <div className={classname["product-bottom-container"]}>
-                <div className={classname["prod-img"]}>
-                  <img src={product12} alt="pixel" />
+             <Link to={"/product/5"} >
+                <div className={classname["product-bottom-container"]}>
+                  <div className={classname["prod-img"]}>
+                    <img src={product11} alt="pixel" />
+                  </div>
+                  <p>
+                    Pixel 6a - Transparent  <br /> LKR 599
+                  </p>
                 </div>
-                <p>
-                  Pixel 7 Pro - Transparent Wireless <br /> LKR 599
-                </p>
-              </div>
+              </Link>
+
+              <Link to={"/product/8"} >
+                <div className={classname["product-bottom-container"]}>
+                  <div className={classname["prod-img"]}>
+                    <img src={product12} alt="pixel" />
+                  </div>
+                  <p>
+                    Pixel 7 Pro - Transparent Wireless <br /> LKR 599
+                  </p>
+                </div>
+              </Link>
             </div>
           </div>
         </div>

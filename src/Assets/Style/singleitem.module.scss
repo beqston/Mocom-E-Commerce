@@ -1,9 +1,10 @@
 .blog-main-container{
     width: 100%;
+    padding-left: 3%;
 
     h2{
         text-align: left;
-        padding-left: 14rem;
+        padding-left: 9rem;
         padding-bottom: 4rem;
     }
 
@@ -34,6 +35,7 @@
 
         h3{
             text-align: left;
+            text-transform: capitalize;
         }
         .span-container{
             margin-top: 1rem;
@@ -64,34 +66,127 @@
             justify-content: space-evenly;
             margin-bottom: 2rem;
 
-           .product-bottom-container{
-            width: 300px;
-            height: 300px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            
-
-            .prod-img{
-                width: 300px;
-                height: 300px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-color: var(--color-litewhite);
-                border-radius: 10px;
-                img{
-                    width: 212px;
-                    height: 212px;
+            a{
+                text-decoration: none;
+                color: black;
+                .product-bottom-container{
+                    width: 300px;
+                    height: 300px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                
+    
+                    .prod-img{
+                        width: 300px;
+                        height: 300px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: var(--color-litewhite);
+                        border-radius: 10px;
+                        img{
+                            width: 212px;
+                            height: 212px;
+                        }
+                    }
+                    p{
+                        width: 300px;
+                        text-align: left;
+                        padding-top: 0.8rem;
+                    }
                 }
             }
-            p{
-                width: 300px;
-                text-align: left;
-                padding-top: 0.8rem;
-            }
-           }
         }
+    }
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .blog-main-container{
+        h2{
+            text-align: left;
+            padding-left: 3%;
+            padding-bottom: 2rem;
+        }
+    
+        .item-main-container{
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+    
+            article{
+                max-width: 580px;
+            }
+        }
+    
+        .blog-botton-container{
+
+    
+            h3{
+                text-align: center;
+                padding-left: 0px;
+            }
+    
+            .main-bottom{
+                flex-wrap: wrap;
+                justify-content: center;
+                column-gap: 80px;
+    
+                a{
+                    padding-bottom: 1rem;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 780px) {
+    .blog-main-container{
+        h2{
+            padding-left: 20%;
+        }
+        .item-main-container{
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 490px) {
+    .blog-main-container{
+
+        h2{
+            padding-left: 0px;
+            text-align: center;
+        }
+        
+        .item-main-container{
+            align-items: center;
+            flex-direction: column;
+    
+            .item-container{
+                width: 90%;
+                height: fit-content;
+            }  
+        }  
+
+        .main-bottom{
+            gap: 0px;
+            padding-right: 0px;
+            justify-content: center;
+            transform: translateX(20px);
+
+            a{
+                padding-bottom: 1rem;
+            }
+        }
+  
     }
 }
