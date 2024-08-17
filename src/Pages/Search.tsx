@@ -25,7 +25,7 @@ const Search = ()=> {
             {
               searchItem.length > 0? <>
               {
-                prods?.filter((item)=> item.name.includes(searchItem)).map((item)=> {
+                prods?.filter((item)=> item.name.toLowerCase().includes(searchItem)).map((item)=> {
                   return(
                     <>
                       <div key={item.id} className={classname["search-main-cnt"]}>

@@ -16,7 +16,13 @@ const Header = () => {
   const navigate = useNavigate();
 
 
-  
+  const handlEnterInput = ()=> {
+    if(searchItem.length > 0){
+      navigate(`/search/${searchItem}`)
+    } else{
+      navigate(`/`)
+    }
+  }
 
 
   return (
@@ -59,7 +65,7 @@ const Header = () => {
           </div>
 
           <div className={classname.search}>
-            <input  onKeyUp={()=> navigate(`/search/${searchItem}`)} id="search" onChange={searchChange} type="text" placeholder="Search Product" />
+            <input  onKeyUp={handlEnterInput} id="search" onChange={searchChange} type="text" placeholder="Search Product" />
             <img onClick={()=> navigate(`/search/${searchItem}`) } src={search} alt="search" />
           </div>
         </div>

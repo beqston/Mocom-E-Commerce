@@ -1,8 +1,6 @@
 import { ReactNode, createContext, useEffect, useState } from "react";
 import { ProdsType } from "../Pages/ShopAll";
-// export type SearchItemType = {
-//   prods: ProdsType;
-// };
+
 export type CartContextType = {
   searchItem: string;
   searchChange: (e: React.ChangeEvent<HTMLInputElement>)=> void;
@@ -16,7 +14,7 @@ const CartContextProvider = ({ children }: { children: ReactNode }) => {
 
   
   const searchChange = (e: React.ChangeEvent<HTMLInputElement>)=> {
-    setSearchItem(e.target.value);
+    setSearchItem(e.target.value.toLowerCase());
   }
 
 
