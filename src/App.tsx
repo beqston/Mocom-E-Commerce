@@ -1,4 +1,5 @@
 import './App.css';
+import CartContextProvider from './context/SearchContext';
 import RouterComponent from './Router/router';
 
 
@@ -7,7 +8,9 @@ import RouterComponent from './Router/router';
 function App() {
   return (
     <div className="App">
-      <RouterComponent />  
+      <CartContextProvider>
+        <RouterComponent />  
+      </CartContextProvider>
     </div>
   );
 }

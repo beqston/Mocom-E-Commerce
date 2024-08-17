@@ -1,12 +1,22 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate, useParams } from "react-router-dom";
 import BurgMenu from "../BurgMenu/BurgMenu";
 import classname from "./style.module.scss";
 import mocom from "../../Assets/Photo/HeaderFoto/mocom.png";
 import search from "../../Assets/Photo/HeaderFoto/search.png";
+import { useContext } from "react";
+import { CartContext, CartContextType } from "../../context/SearchContext";
 
 
 
 const Header = () => {
+
+  const {searchItem, searchChange} = useContext(CartContext) as CartContextType
+  let {searchProducts} = useParams()
+  console.log(searchProducts)
+  const navigate = useNavigate();
+
+
+  
 
 
   return (
@@ -49,8 +59,8 @@ const Header = () => {
           </div>
 
           <div className={classname.search}>
-            <input type="text" placeholder="Search Product" />
-            <img src={search} alt="search" />
+            <input  onKeyUp={()=> navigate(`/search/${searchItem}`)} id="search" onChange={searchChange} type="text" placeholder="Search Product" />
+            <img onClick={()=> navigate(`/search/${searchItem}`) } src={search} alt="search" />
           </div>
         </div>
       </div>

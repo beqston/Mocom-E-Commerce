@@ -6,6 +6,7 @@ import About from "../Pages/AboutUs";
 import SingleItem from "../Pages/SingleItem";
 import NotFound from "../Pages/NotFound";
 import Layout from "../Layout/Layout";
+import Search from "../Pages/Search";
 
 const RouterComponent = () => {
   return (
@@ -16,6 +17,7 @@ const RouterComponent = () => {
             <Route path="/blog" element={<Blog />} />
             <Route path="/about" element={<About />} />
             <Route path="/product/:productID" element={<SingleItem />} />
+            <Route path="/search/:searchProducts" element={<Search />} />
             <Route path="*" element={<NotFound />} />
         </Route>
 
