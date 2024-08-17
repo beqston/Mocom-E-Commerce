@@ -1,4 +1,5 @@
 .search-main-cnt{
+    max-width: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -7,6 +8,7 @@
     margin-top: 40px;
     margin-bottom: 30px;
     padding-right: 4%;
+    overflow-y: hidden;
 
     a{
         text-decoration: none;
@@ -29,9 +31,29 @@
         .p-cnt{
             p{
                 text-align: left;
+                font-size: 22px;
+                font-weight: 700;
             }
         }
       
     }
     
+}
+@media screen and (max-width: 770px) {
+    .search-main-cnt{
+        a{
+            flex-direction: column;
+            align-items: center;
+            row-gap: 20px;
+        }
+    }
+}
+@media screen and (max-width: 420px) {
+    .search-main-cnt{
+        .p-cnt{
+            p{
+               font-size: 17px;
+            }
+        }
+    }
 }

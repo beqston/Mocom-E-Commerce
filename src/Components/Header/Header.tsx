@@ -11,8 +11,6 @@ import { CartContext, CartContextType } from "../../context/SearchContext";
 const Header = () => {
 
   const {searchItem, searchChange} = useContext(CartContext) as CartContextType
-  let {searchProducts} = useParams()
-  console.log(searchProducts)
   const navigate = useNavigate();
 
 

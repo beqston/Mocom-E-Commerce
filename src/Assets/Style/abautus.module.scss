@@ -1,6 +1,7 @@
 main{
     width: 100%;
-
+    max-width: 100%;
+    overflow-y: hidden;
     .abaut-main-container{
         display: flex;
         flex-direction: column;
