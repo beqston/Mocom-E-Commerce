@@ -14,15 +14,17 @@ const Header = () => {
   const navigate = useNavigate();
 
 
-  const handlEnterInput = ()=> {
-    if(searchItem.length > 0){
-      navigate(`/search/${searchItem}`)
-    } else{
-      navigate(`/`)
+  const handlEnterInput = (e: React.KeyboardEvent<HTMLInputElement>)=> {
+    if(e.key === "Enter"){
+      if(searchItem.length > 0){
+        navigate(`/search/${searchItem}`)
+      } else{
+        navigate(`/`)
+      }
     }
   }
 
-
+ console.log(window)
   return (
     <header>
       <div className={classname["header-container"]}>
@@ -63,7 +65,7 @@ const Header = () => {
           </div>
 
           <div className={classname.search}>
-            <input  onKeyUp={handlEnterInput} id="search" onChange={searchChange} type="text" placeholder="Search Product" />
+            <input onKeyUp={handlEnterInput} id="search" onChange={searchChange} type="text" placeholder="Search Product" />
             <img onClick={()=> navigate(`/search/${searchItem}`) } src={search} alt="search" />
           </div>
         </div>
