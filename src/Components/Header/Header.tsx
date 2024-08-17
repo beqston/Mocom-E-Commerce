@@ -18,9 +18,11 @@ const Header = () => {
     if(e.key === "Enter"){
       if(searchItem.length > 0){
         navigate(`/search/${searchItem}`)
-      } else{
-        navigate(`/`)
       }
+    }
+
+    if(searchItem.length === 0){
+      navigate(`/`)
     }
   }
 
