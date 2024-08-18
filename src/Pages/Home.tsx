@@ -150,7 +150,7 @@ const Home = () => {
 
               <br />
               <div className={classname['botom-btn']}>
-              <NavLink to={"/item"}><button> Shop Tempered Glass </button></NavLink>
+              <NavLink to={"/product/8"}><button> Shop Tempered Glass </button></NavLink>
               </div>
             </div>
 
