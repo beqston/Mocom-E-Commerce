@@ -1,4 +1,4 @@
-import { NavLink, useNavigate, useParams } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import BurgMenu from "../BurgMenu/BurgMenu";
 import classname from "./style.module.scss";
 import mocom from "../../Assets/Photo/HeaderFoto/mocom.png";
@@ -12,17 +12,11 @@ const Header = () => {
 
   const {searchItem, searchChange} = useContext(CartContext) as CartContextType
   const navigate = useNavigate();
-
-
   const handlEnterInput = (e: React.KeyboardEvent<HTMLInputElement>)=> {
     if(e.key === "Enter"){
       if(searchItem.length > 0){
         navigate(`/search/${searchItem}`)
       }
-    }
-
-    if(searchItem.length === 0){
-      navigate(`/`)
     }
   }
 
@@ -32,7 +26,6 @@ const Header = () => {
       <div className={classname["header-container"]}>
         
         <BurgMenu />
-
         <div className={classname["header-left-container"]}>
           <nav>
             <ul>

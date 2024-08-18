@@ -43,7 +43,7 @@ const Search = ()=> {
                   )
                 })
               }
-              </>:null
+              </>:<h3 style={{padding:"32px", fontSize:"32px", color:"red"}}>No results found</h3>
             }
         </main>
     )
